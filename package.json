@@ -1,6 +1,6 @@
 {
   "name": "replay-reader",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A tool to read Fortnite replays",
   "main": "src/index.js",
   "author": "ThisNils",
