@@ -3,14 +3,14 @@ A tool to parse with fortnite replays
 
 ## Installation
 ```
-npm i node-replay-reader
+npm i replay-reader
 ```
 
 ## Example
 Example: 
 ```javascript
 const { readFile, writeFile } = require('fs').promises;
-const parse = require('node-replay-reader');
+const parse = require('replay-reader');
 
 (async () => {
   const replayBuffer = await readFile('./replays/1.replay');
