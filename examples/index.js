@@ -1,9 +1,8 @@
-const { readFile, writeFile } = require('fs').promises;
-const parse = require('..');
+const fs = require('fs').promises;
+const { ReplayReader } = require('../dist');
 
 (async () => {
-  const replayBuffer = await readFile('./replays/1.replay');
-  const parsedReplay = parse(replayBuffer);
-  await writeFile('./parsedReplay.json', JSON.stringify(parsedReplay, null, 2));
-  console.log('Wrote results to ./parsedReplay.json');
+  const reader = new ReplayReader('./replays/1.replay');
+  const replay = await reader.parse();
+  await fs.writeFile('./replay.json', JSON.stringify(replay, null, 2));
 })();
