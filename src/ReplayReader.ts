@@ -15,15 +15,16 @@ import {
 } from './structs';
 
 class ReplayReader {
-  config: ReaderConfig;
-  replay: Parseable;
-  reader?: BinaryReader;
-  encryption: ReplayEncryption;
-  meta?: ReplayMeta;
-  header?: ReplayHeader;
-  eliminations: ReplayElimination[];
-  matchStats?: ReplayMatchStats;
-  teamMatchStats?: ReplayTeamMatchStats;
+  private config: ReaderConfig;
+  private replay: Parseable;
+  private reader?: BinaryReader;
+  private encryption: ReplayEncryption;
+  private meta?: ReplayMeta;
+  private header?: ReplayHeader;
+  private eliminations: ReplayElimination[];
+  private matchStats?: ReplayMatchStats;
+  private teamMatchStats?: ReplayTeamMatchStats;
+
   constructor(replay: Parseable, config?: ReaderConfig) {
     this.config = {
       debug: undefined,
@@ -48,7 +49,7 @@ class ReplayReader {
     if (!replay) throw new Error('Please provide a replay in the client constructor');
   }
 
-  async parse() {
+  public async parse() {
     if (typeof this.replay === 'string') {
       this.replay = await fs.readFile(this.replay);
     }
@@ -77,7 +78,7 @@ class ReplayReader {
     return this.toObject();
   }
 
-  parseMeta(): ReplayMeta {
+  private parseMeta(): ReplayMeta {
     if (!this.reader) throw new Error('This is an internal method which is not supposed to be called manually. Please use <ReplayReader>.parse()');
 
     const magic = this.reader.readUInt32();
@@ -127,7 +128,7 @@ class ReplayReader {
     };
   }
 
-  parseChunks() {
+  private parseChunks() {
     if (!this.reader) throw new Error('This is an internal method which is not supposed to be called manually. Please use <ReplayReader>.parse()');
 
     while (this.reader.buffer.byteLength > this.reader.offset) {
@@ -146,7 +147,7 @@ class ReplayReader {
     }
   }
 
-  parseHeader() {
+  private parseHeader() {
     if (!this.reader) throw new Error('This is an internal method which is not supposed to be called manually. Please use <ReplayReader>.parse()');
 
     const magic = this.reader.readUInt32();
@@ -189,7 +190,7 @@ class ReplayReader {
     };
   }
 
-  parseEvent() {
+  private parseEvent() {
     if (!this.reader) throw new Error('This is an internal method which is not supposed to be called manually. Please use <ReplayReader>.parse()');
     if (!this.header) throw new Error('Replay is missing a header chunk');
 
@@ -210,7 +211,7 @@ class ReplayReader {
     else if (metadata === 'AthenaMatchTeamStats') this.parseTeamMatchStats();
   }
 
-  parsePlayerElim(reader: BinaryReader, timestamp: number) {
+  private parsePlayerElim(reader: BinaryReader, timestamp: number) {
     if (!this.reader || !this.header) throw new Error('This is an internal method which is not supposed to be called manually. Please use <ReplayReader>.parse()');
 
     let eliminated;
@@ -241,7 +242,7 @@ class ReplayReader {
     });
   }
 
-  parsePlayer(reader: BinaryReader) {
+  private parsePlayer(reader: BinaryReader) {
     const playerType = reader.readByte().toString('hex');
 
     const player: ReplayPlayer = { name: undefined, id: undefined, isBot: true };
@@ -258,7 +259,7 @@ class ReplayReader {
     return player;
   }
 
-  parseMatchStats() {
+  private parseMatchStats() {
     if (!this.reader) throw new Error('This is an internal method which is not supposed to be called manually. Please use <ReplayReader>.parse()');
 
     this.reader.skip(4);
@@ -289,7 +290,7 @@ class ReplayReader {
     };
   }
 
-  parseTeamMatchStats() {
+  private parseTeamMatchStats() {
     if (!this.reader) throw new Error('This is an internal method which is not supposed to be called manually. Please use <ReplayReader>.parse()');
 
     this.reader.skip(4);
@@ -302,7 +303,7 @@ class ReplayReader {
     };
   }
 
-  toObject() {
+  private toObject() {
     if (!this.meta || !this.header || !this.matchStats || !this.teamMatchStats || !this.eliminations) {
       throw new Error('Cannot use <ReplayReader>.toObject() before replay was parsed');
     }
