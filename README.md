@@ -1,4 +1,10 @@
 # node-replay-reader
+
+[![Node.js CI](https://github.com/ThisNils/node-replay-reader/actions/workflows/main.yml/badge.svg)](https://github.com/ThisNils/node-replay-reader/actions/workflows/main.yml)
+[![npm version](https://img.shields.io/npm/v/replay-reader.svg)](https://npmjs.com/package/replay-reader)
+[![npm downloads](https://img.shields.io/npm/dm/replay-reader.svg)](https://npmjs.com/package/replay-reader)
+[![license](https://img.shields.io/npm/l/replay-reader.svg)](https://github.com/ThisNils/node-replay-reader/blob/master/LICENSE)
+
 A tool to parse fortnite replays
 
 ## Installation
