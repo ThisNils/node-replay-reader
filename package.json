@@ -13,6 +13,13 @@
     "build": "tsc",
     "test": "mocha mocha.test.js"
   },
+  "files": [
+    "dist",
+    "package.json",
+    "package-lock.lock",
+    "README.md",
+    "LICENSE"
+  ],
   "author": "ThisNils",
   "license": "MIT",
   "devDependencies": {

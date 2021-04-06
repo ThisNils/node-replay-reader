@@ -1,7 +1,6 @@
-import BinaryReader from './src/BinaryReader';
-import ReplayReader from './src/ReplayReader';
+// Main lib exports
+export { default as ReplayReader } from './src/ReplayReader';
+export { default as BinaryReader } from './src/BinaryReader';
 
-export {
-  BinaryReader,
-  ReplayReader,
-};
+// Supporting interfaces
+export * from './src/structs';
