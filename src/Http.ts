@@ -13,12 +13,15 @@ interface HttpResponse {
 
 const accountQuery = `
 query AccountQuery($accountIds: [String]!) {
-    Account {
-        accounts(accountIds: $accountIds) {
-            id
-            displayName
-        }
+  Account {
+    accounts(accountIds: $accountIds) {
+      id
+      displayName
+      externalAuths {
+        externalDisplayName
+      }
     }
+  }
 }
 `;
 

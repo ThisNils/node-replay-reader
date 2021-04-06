@@ -68,8 +68,8 @@ class ReplayReader {
 
       accounts.forEach((a) => {
         this.eliminations.forEach((e) => {
-          if (e.eliminated.id === a.id) e.eliminated.name = a.displayName;
-          if (e.eliminator.id === a.id) e.eliminator.name = a.displayName;
+          if (e.eliminated.id === a.id) e.eliminated.name = a.displayName || a.externalAuths[0].externalDisplayName;
+          if (e.eliminator.id === a.id) e.eliminator.name = a.displayName || a.externalAuths[0].externalDisplayName;
         });
       });
     }
