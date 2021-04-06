@@ -1,6 +1,7 @@
 export interface ReaderConfig {
   // eslint-disable-next-line no-unused-vars
   debug: undefined | ((msg: string) => void);
+  resolveAccountNames: boolean;
 }
 
 export type Parseable = Buffer | string;

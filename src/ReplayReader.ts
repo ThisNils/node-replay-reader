@@ -1,6 +1,7 @@
 /* eslint-disable class-methods-use-this */
 import { promises as fs } from 'fs';
 import BinaryReader from './BinaryReader';
+import { queryAccounts } from './Http';
 import {
   ReaderConfig,
   Parseable,
@@ -26,6 +27,7 @@ class ReplayReader {
   constructor(replay: Parseable, config?: ReaderConfig) {
     this.config = {
       debug: undefined,
+      resolveAccountNames: false,
       ...config,
     };
 
@@ -55,6 +57,22 @@ class ReplayReader {
 
     this.meta = this.parseMeta();
     this.parseChunks();
+
+    if (this.config.resolveAccountNames) {
+      const accountIds: string[] = [];
+      [...this.eliminations.map((e) => e.eliminated), ...this.eliminations.map((e) => e.eliminator)].forEach((p) => {
+        if (!p.isBot && p.id && !accountIds.includes(p.id)) accountIds.push(p.id);
+      });
+
+      const accounts = await queryAccounts(accountIds);
+
+      accounts.forEach((a) => {
+        this.eliminations.forEach((e) => {
+          if (e.eliminated.id === a.id) e.eliminated.name = a.displayName;
+          if (e.eliminator.id === a.id) e.eliminator.name = a.displayName;
+        });
+      });
+    }
 
     return this.toObject();
   }
