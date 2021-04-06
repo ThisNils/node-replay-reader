@@ -1,9 +1,9 @@
 # node-replay-reader
-A tool to parse with fortnite replays
+A tool to parse fortnite replays
 
 ## Installation
 ```
-npm i replay-reader
+npm install replay-reader
 ```
 
 ## Example
