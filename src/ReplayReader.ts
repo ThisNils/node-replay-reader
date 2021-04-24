@@ -207,8 +207,8 @@ class ReplayReader {
     const eventReader = new BinaryReader(decryptedEventBuffer);
 
     if (group === 'playerElim') this.parsePlayerElim(eventReader, startTime);
-    else if (metadata === 'AthenaMatchStats') this.parseMatchStats();
-    else if (metadata === 'AthenaMatchTeamStats') this.parseTeamMatchStats();
+    else if (metadata === 'AthenaMatchStats') this.parseMatchStats(eventReader);
+    else if (metadata === 'AthenaMatchTeamStats') this.parseTeamMatchStats(eventReader);
   }
 
   private parsePlayerElim(reader: BinaryReader, timestamp: number) {
@@ -259,21 +259,19 @@ class ReplayReader {
     return player;
   }
 
-  private parseMatchStats() {
-    if (!this.reader) throw new Error('This is an internal method which is not supposed to be called manually. Please use <ReplayReader>.parse()');
-
-    this.reader.skip(4);
-    const accuracy = this.reader.readFloat32();
-    const assists = this.reader.readUInt32();
-    const eliminations = this.reader.readUInt32();
-    const weaponDamage = this.reader.readUInt32();
-    const otherDamage = this.reader.readUInt32();
-    const revives = this.reader.readUInt32();
-    const damageTaken = this.reader.readUInt32();
-    const damageToStructures = this.reader.readUInt32();
-    const materialsGathered = this.reader.readUInt32();
-    const materialsUsed = this.reader.readUInt32();
-    const totalTraveled = Math.round(this.reader.readUInt32() / 100000);
+  private parseMatchStats(reader: BinaryReader) {
+    reader.skip(4);
+    const accuracy = reader.readFloat32();
+    const assists = reader.readUInt32();
+    const eliminations = reader.readUInt32();
+    const weaponDamage = reader.readUInt32();
+    const otherDamage = reader.readUInt32();
+    const revives = reader.readUInt32();
+    const damageTaken = reader.readUInt32();
+    const damageToStructures = reader.readUInt32();
+    const materialsGathered = reader.readUInt32();
+    const materialsUsed = reader.readUInt32();
+    const totalTraveled = Math.round(reader.readUInt32() / 100000);
 
     this.matchStats = {
       accuracy,
@@ -290,12 +288,10 @@ class ReplayReader {
     };
   }
 
-  private parseTeamMatchStats() {
-    if (!this.reader) throw new Error('This is an internal method which is not supposed to be called manually. Please use <ReplayReader>.parse()');
-
-    this.reader.skip(4);
-    const position = this.reader.readUInt32();
-    const totalPlayers = this.reader.readUInt32();
+  private parseTeamMatchStats(reader: BinaryReader) {
+    reader.skip(4);
+    const position = reader.readUInt32();
+    const totalPlayers = reader.readUInt32();
 
     this.teamMatchStats = {
       position,
@@ -304,7 +300,7 @@ class ReplayReader {
   }
 
   private toObject() {
-    if (!this.meta || !this.header || !this.matchStats || !this.teamMatchStats || !this.eliminations) {
+    if (!this.meta || !this.header || !this.matchStats || !this.eliminations) {
       throw new Error('Cannot use <ReplayReader>.toObject() before replay was parsed');
     }
 
