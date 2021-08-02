@@ -300,7 +300,7 @@ class ReplayReader {
   }
 
   private toObject() {
-    if (!this.meta || !this.header || !this.matchStats || !this.eliminations) {
+    if (!this.meta || !this.header || !this.eliminations) {
       throw new Error('Cannot use <ReplayReader>.toObject() before replay was parsed');
     }
 
