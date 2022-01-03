@@ -1,3 +1,13 @@
+const CryptoJSWordArrayToArrayBuffer = (wordArray) => {
+    const words = wordArray.words;
+    const sigBytes = wordArray.sigBytes;
+    const bytes = new Uint8Array(sigBytes);
+    for (let i = 0; i < sigBytes; i++) {
+        bytes[i] = (words[i >>> 2] >>> (24 - (i % 4) * 8)) & 0xff;
+    }
+    return bytes.buffer;
+}
+
 class BinaryReader {
     constructor(buffer) {
         this.buffer = new DataView(buffer);
@@ -95,7 +105,7 @@ class BinaryReader {
         if (length === 0)
             return '';
         if (length < 0)
-            return new TextDecoder().decode(this.readBytes(length * -2).slice(0, -2)).trim();
+            return new TextDecoder('utf-16le').decode(this.readBytes(length * -2).slice(0, -2)).trim();
         const str = this.readBytes(length).slice(0, -1);
         return new TextDecoder().decode(str);
     }
@@ -109,7 +119,7 @@ class BinaryReader {
      * Read a byte
      */
     readByte() {
-        return this.readBytes(1);
+        return this.readUInt8();
     }
     /**
      * Read multiple bytes
@@ -154,7 +164,16 @@ class BinaryReader {
      */
     decryptBuffer(encryptedLength, key) {
         const bytes = this.readBytes(encryptedLength);
-        return CryptoJS.AES.decrypt(bytes, key);
+
+        const bytesAsHex = [...new Uint8Array(bytes)].map((b) => b.toString(16).padStart(2, '0')).join('');
+        const cipher = CryptoJS.enc.Base64.stringify(CryptoJS.enc.Hex.parse(bytesAsHex))
+
+        const decryptedArrayBuffer = CryptoJS.AES.decrypt(cipher, key, {
+            mode: CryptoJS.mode.ECB,
+            padding: CryptoJS.pad.NoPadding,
+        });
+
+        return CryptoJSWordArrayToArrayBuffer(decryptedArrayBuffer);
     }
 }
 
@@ -203,11 +222,12 @@ class ReplayReader {
         if (fileVersion >= 2)
             isCompressed = this.reader.readBool();
         let isEncrypted = false;
-        let encryptionKey = new ArrayBuffer(0);
+        let encryptionKey = CryptoJS.lib.WordArray.create(new ArrayBuffer(0));
         if (fileVersion >= 6) {
             isEncrypted = this.reader.readBool();
             const encryptionKeyLength = this.reader.readUInt32();
-            encryptionKey = this.reader.readBytes(encryptionKeyLength);
+            const encryptionKeyBuffer = [...new Uint8Array(this.reader.readBytes(encryptionKeyLength))].map((e) => e.toString(16).padStart(2, '0')).join('');
+            encryptionKey = CryptoJS.enc.Hex.parse(encryptionKeyBuffer);
         }
         if (!isLive && isEncrypted && encryptionKey.length === 0)
             throw new Error('Cannot read encrypted replay without encryption key');
@@ -329,7 +349,7 @@ class ReplayReader {
             eliminated = { name: undefined, id: reader.readString(), isBot: false };
             eliminator = { name: undefined, id: reader.readString(), isBot: false };
         }
-        const gunType = [...new Uint8Array(reader.readByte())][0].toString(16).padStart(2, '0');
+        const gunType = reader.readByte().toString(16).padStart(2, '0');
         const knocked = reader.readBool();
         this.eliminations.push({
             eliminated,
@@ -340,7 +360,8 @@ class ReplayReader {
         });
     }
     parsePlayer(reader) {
-        const playerType = [...new Uint8Array(reader.readByte())][0].toString(16).padStart(2, '0');
+        const byte = reader.readByte();
+        const playerType = byte.toString(16).padStart(2, '0');
         const player = { name: undefined, id: undefined, isBot: true };
         if (playerType === '03') {
             player.name = 'Bot';
