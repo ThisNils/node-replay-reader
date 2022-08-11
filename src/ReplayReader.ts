@@ -15,25 +15,17 @@ import {
 } from './structs';
 
 class ReplayReader {
-  private config: ReaderConfig;
-  private replay: Parseable;
-  private reader?: BinaryReader;
+  private replay: Buffer;
+  private reader: BinaryReader;
   private encryption: ReplayEncryption;
   private meta?: ReplayMeta;
   private header?: ReplayHeader;
   private eliminations: ReplayElimination[];
   private matchStats?: ReplayMatchStats;
   private teamMatchStats?: ReplayTeamMatchStats;
-
-  constructor(replay: Parseable, config?: ReaderConfig) {
-    this.config = {
-      debug: undefined,
-      resolveAccountNames: false,
-      ...config,
-    };
-
+  private constructor(replay: Buffer) {
     this.replay = replay;
-    this.reader = undefined;
+    this.reader = new BinaryReader(this.replay);
 
     this.encryption = {
       isEncrypted: undefined,
@@ -45,42 +37,9 @@ class ReplayReader {
     this.eliminations = [];
     this.matchStats = undefined;
     this.teamMatchStats = undefined;
-
-    if (!replay) throw new Error('Please provide a replay in the client constructor');
   }
 
-  public async parse() {
-    if (typeof this.replay === 'string') {
-      this.replay = await fs.readFile(this.replay);
-    }
-
-    this.reader = new BinaryReader(this.replay);
-
-    this.meta = this.parseMeta();
-    this.parseChunks();
-
-    if (this.config.resolveAccountNames) {
-      const accountIds: string[] = [];
-      [...this.eliminations.map((e) => e.eliminated), ...this.eliminations.map((e) => e.eliminator)].forEach((p) => {
-        if (!p.isBot && p.id && !accountIds.includes(p.id)) accountIds.push(p.id);
-      });
-
-      const accounts = await queryAccounts(accountIds);
-
-      accounts.forEach((a) => {
-        this.eliminations.forEach((e) => {
-          if (e.eliminated.id === a.id) e.eliminated.name = a.displayName || a.externalAuths[0].externalDisplayName;
-          if (e.eliminator.id === a.id) e.eliminator.name = a.displayName || a.externalAuths[0].externalDisplayName;
-        });
-      });
-    }
-
-    return this.toObject();
-  }
-
-  private parseMeta(): ReplayMeta {
-    if (!this.reader) throw new Error('This is an internal method which is not supposed to be called manually. Please use <ReplayReader>.parse()');
-
+  private parseMeta() {
     const magic = this.reader.readUInt32();
     const fileVersion = this.reader.readUInt32();
     const lengthInMs = this.reader.readUInt32();
@@ -115,7 +74,7 @@ class ReplayReader {
       this.encryption.encryptionKey = encryptionKey;
     }
 
-    return {
+    this.meta = {
       magic,
       fileVersion,
       lengthInMs,
@@ -129,18 +88,22 @@ class ReplayReader {
   }
 
   private parseChunks() {
-    if (!this.reader) throw new Error('This is an internal method which is not supposed to be called manually. Please use <ReplayReader>.parse()');
-
+    const chunksStartOffset = this.reader.offset;
     while (this.reader.buffer.byteLength > this.reader.offset) {
       const chunkType = this.reader.readUInt32();
       const chunkSize = this.reader.readInt32();
       const startOffset = this.reader.offset;
 
       switch (chunkType) {
-        case 0: this.header = this.parseHeader(); break;
+        case 0:
+          if (!this.header) {
+            this.parseHeader();
+            this.reader.goto(chunksStartOffset);
+          }
+          break;
         case 1: break;
         case 2: break;
-        case 3: this.parseEvent(); break;
+        case 3: if (this.header) this.parseEvent(); break;
       }
 
       this.reader.goto(startOffset + chunkSize);
@@ -148,8 +111,6 @@ class ReplayReader {
   }
 
   private parseHeader() {
-    if (!this.reader) throw new Error('This is an internal method which is not supposed to be called manually. Please use <ReplayReader>.parse()');
-
     const magic = this.reader.readUInt32();
     const networkVersion = this.reader.readUInt32();
     const networkChecksum = this.reader.readUInt32();
@@ -170,7 +131,7 @@ class ReplayReader {
     const major = parseInt((branch.match(/(?<=-)\d*/) as any[])[0], 10);
     const minor = parseInt((branch.match(/\d*$/)as any[])[0], 10);
 
-    return {
+    this.header = {
       magic,
       networkVersion,
       networkChecksum,
@@ -299,6 +260,22 @@ class ReplayReader {
     };
   }
 
+  private async resolveDisplayNames() {
+    const accountIds: string[] = [];
+    [...this.eliminations.map((e) => e.eliminated), ...this.eliminations.map((e) => e.eliminator)].forEach((p) => {
+      if (!p.isBot && p.id && !accountIds.includes(p.id)) accountIds.push(p.id);
+    });
+
+    const accounts = await queryAccounts(accountIds);
+
+    accounts.forEach((a) => {
+      this.eliminations.forEach((e) => {
+        if (e.eliminated.id === a.id) e.eliminated.name = a.displayName || a.externalAuths[0].externalDisplayName;
+        if (e.eliminator.id === a.id) e.eliminator.name = a.displayName || a.externalAuths[0].externalDisplayName;
+      });
+    });
+  }
+
   private toObject() {
     if (!this.meta || !this.header || !this.eliminations) {
       throw new Error('Cannot use <ReplayReader>.toObject() before replay was parsed');
@@ -311,6 +288,18 @@ class ReplayReader {
       teamMatchStats: this.teamMatchStats,
       eliminations: this.eliminations,
     };
+  }
+
+  public static async parse(replay: Parseable, config?: ReaderConfig) {
+    const replayBuffer = Buffer.isBuffer(replay) ? replay : await fs.readFile(replay);
+
+    const reader = new ReplayReader(replayBuffer);
+    reader.parseMeta();
+    reader.parseChunks();
+
+    if (config?.resolveAccountNames) await reader.resolveDisplayNames();
+
+    return reader.toObject();
   }
 }
 

@@ -1,6 +1,6 @@
 {
   "name": "replay-reader",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "description": "A tool to read Fortnite replays",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -16,7 +16,7 @@
   "files": [
     "dist",
     "package.json",
-    "package-lock.lock",
+    "package-lock.json",
     "README.md",
     "LICENSE"
   ],
