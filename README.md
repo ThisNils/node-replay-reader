@@ -19,8 +19,7 @@ const fs = require('fs').promises;
 const { ReplayReader } = require('replay-reader');
 
 (async () => {
-  const reader = new ReplayReader('./replays/1.replay');
-  const replay = await reader.parse();
+  const replay = await ReplayReader.parse('./replays/1.replay');
   await fs.writeFile('./replay.json', JSON.stringify(replay, null, 2));
 })();
 
