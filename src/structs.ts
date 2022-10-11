@@ -11,6 +11,19 @@ export interface ReplayEncryption {
   encryptionKey?: Buffer;
 }
 
+export interface Vector3 {
+  x: number;
+  y: number;
+  z: number;
+}
+
+export interface Vector4 {
+  x: number;
+  y: number;
+  z: number;
+  w: number;
+}
+
 export interface ReplayMeta {
   magic: number;
   fileVersion: number;
@@ -37,15 +50,25 @@ export interface ReplayHeader {
     changelist: number;
     patch: number;
   };
+  fileVersionUE4?: number;
+  fileVersionUE5?: number;
+  packageVersionLicenseeUe?: number;
   levelNamesAndTimes: any[];
   flags: number;
   gameSpecificData: any[];
+}
+
+export interface Location {
+  rotation: Vector4,
+  position: Vector3,
+  scale: Vector3,
 }
 
 export interface ReplayPlayer {
   name?: string;
   id?: string;
   isBot: boolean;
+  location?: Location;
 }
 
 export interface ReplayElimination {

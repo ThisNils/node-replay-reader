@@ -12,6 +12,7 @@ import {
   ReplayElimination,
   ReplayMatchStats,
   ReplayTeamMatchStats,
+  Location,
 } from './structs';
 
 class ReplayReader {
@@ -124,12 +125,23 @@ class ReplayReader {
     const patch = this.reader.readUInt16();
     const changelist = this.reader.readUInt32();
     const branch = this.reader.readString();
+
+    let fileVersionUE4;
+    let fileVersionUE5;
+    let packageVersionLicenseeUe;
+
+    if (networkVersion >= 18) {
+      fileVersionUE4 = this.reader.readUInt32();
+      fileVersionUE5 = this.reader.readUInt32();
+      packageVersionLicenseeUe = this.reader.readUInt32();
+    }
+
     const levelNamesAndTimes = this.reader.readObjectArray((r) => r.readString(), (r) => r.readUInt32());
     const flags = this.reader.readUInt32();
     const gameSpecificData = this.reader.readArray((r) => r.readString());
 
     const major = parseInt((branch.match(/(?<=-)\d*/) as any[])[0], 10);
-    const minor = parseInt((branch.match(/\d*$/)as any[])[0], 10);
+    const minor = parseInt((branch.match(/\d*$/) as any[])[0], 10);
 
     this.header = {
       magic,
@@ -145,10 +157,15 @@ class ReplayReader {
         changelist,
         patch,
       },
+      fileVersionUE4,
+      fileVersionUE5,
+      packageVersionLicenseeUe,
       levelNamesAndTimes,
       flags,
       gameSpecificData,
     };
+
+    this.reader.engineNetworkVersion = engineNetworkVersion;
   }
 
   private parseEvent() {
@@ -167,6 +184,8 @@ class ReplayReader {
 
     const eventReader = new BinaryReader(decryptedEventBuffer);
 
+    eventReader.engineNetworkVersion = this.header.engineNetworkVersion;
+
     if (group === 'playerElim') this.parsePlayerElim(eventReader, startTime);
     else if (metadata === 'AthenaMatchStats') this.parseMatchStats(eventReader);
     else if (metadata === 'AthenaMatchTeamStats') this.parseTeamMatchStats(eventReader);
@@ -175,17 +194,51 @@ class ReplayReader {
   private parsePlayerElim(reader: BinaryReader, timestamp: number) {
     if (!this.reader || !this.header) throw new Error('This is an internal method which is not supposed to be called manually. Please use <ReplayReader>.parse()');
 
-    let eliminated;
-    let eliminator;
+    const version = reader.readInt32();
+    let eliminated: ReplayPlayer;
+    let eliminator: ReplayPlayer;
 
-    if (this.header.engineNetworkVersion >= 11 && this.header.version.major >= 9) {
-      reader.skip(85);
-      eliminated = this.parsePlayer(reader);
-      eliminator = this.parsePlayer(reader);
+    if (version >= 3) {
+      reader.skip(1);
+      let eliminatedPos;
+
+      if (version >= 6) {
+        eliminatedPos = <Location>{
+          rotation: reader.readVector4d(),
+          position: reader.readVector3d(),
+          scale: reader.readVector3d(),
+        };
+      }
+
+      const eliminatorPos: Location = {
+        rotation: reader.readVector4d(),
+        position: reader.readVector3d(),
+        scale: reader.readVector3d(),
+      };
+
+      if (this.header.version.major >= 9) {
+        eliminated = this.parsePlayer(reader);
+        eliminator = this.parsePlayer(reader);
+
+        eliminated.location = eliminatedPos;
+        eliminator.location = eliminatorPos;
+      } else {
+        eliminated = {
+          name: reader.readString(),
+          location: eliminatedPos,
+          isBot: false,
+        };
+
+        eliminator = {
+          name: reader.readString(),
+          location: eliminatorPos,
+          isBot: false,
+        };
+      }
     } else {
-      if (this.header.version.branch === '++Fortnite+Release-4.0') reader.skip(12);
-      else if (this.header.version.branch === '++Fortnite+Release-4.2') reader.skip(40);
-      else reader.skip(45);
+      if (this.header.version.major <= 4 && this.header.version.minor < 2) reader.skip(8);
+      else if (this.header.version.major === 4 && this.header.version.minor <= 2) reader.skip(36);
+      else reader.skip(41);
 
       eliminated = { name: undefined, id: reader.readString(), isBot: false };
       eliminator = { name: undefined, id: reader.readString(), isBot: false };

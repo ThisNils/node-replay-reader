@@ -3,9 +3,12 @@ import crypto from 'crypto';
 class BinaryReader {
   buffer: Buffer;
   offset: number;
+  engineNetworkVersion: number;
+
   constructor(buffer: Buffer) {
     this.buffer = buffer;
     this.offset = 0;
+    this.engineNetworkVersion = 0;
   }
 
   /**
@@ -104,6 +107,19 @@ class BinaryReader {
   }
 
   /**
+   * Read a double64 if the replay supports it. if not read a float32
+   */
+  readDouble64() {
+    if (this.engineNetworkVersion < 23) {
+      return this.readFloat32();
+    }
+
+    const double64 = this.buffer.readDoubleLE(this.offset);
+    this.offset += 8;
+    return double64;
+  }
+
+  /**
    * Read a string
    */
   readString() {
@@ -121,6 +137,60 @@ class BinaryReader {
    */
   readBool() {
     return this.readInt32() === 1;
+  }
+
+  /**
+   * Read a 4 dimensional vector consisting of floats
+   */
+  readVector4f() {
+    return {
+      x: this.readFloat32(),
+      y: this.readFloat32(),
+      z: this.readFloat32(),
+      w: this.readFloat32(),
+    };
+  }
+
+  /**
+   * Read a 3 dimensional vector consisting of floats
+   */
+  readVector3f() {
+    return {
+      x: this.readFloat32(),
+      y: this.readFloat32(),
+      z: this.readFloat32(),
+    };
+  }
+
+  /**
+   * Read a 4 dimensional vector consisting of doubles if the replay supports it. if not read a 4 dimensional vector consisting of floats
+   */
+  readVector4d() {
+    if (this.engineNetworkVersion < 23) {
+      return this.readVector4f();
+    }
+
+    return {
+      x: this.readDouble64(),
+      y: this.readDouble64(),
+      z: this.readDouble64(),
+      w: this.readDouble64(),
+    };
+  }
+
+  /**
+   * Read a 3 dimensional vector consisting of doubles if the replay supports it. if not read a 3 dimensional vector consisting of floats
+   */
+  readVector3d() {
+    if (this.engineNetworkVersion < 23) {
+      return this.readVector3f();
+    }
+
+    return {
+      x: this.readDouble64(),
+      y: this.readDouble64(),
+      z: this.readDouble64(),
+    };
   }
 
   /**
