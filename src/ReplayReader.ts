@@ -13,7 +13,12 @@ import {
   ReplayMatchStats,
   ReplayTeamMatchStats,
   Location,
+  AdditionGfp,
+  SafeZone,
+  PlayerPositions,
 } from './structs';
+
+const halfMapSize = 131328;
 
 class ReplayReader {
   private replay: Buffer;
@@ -24,6 +29,9 @@ class ReplayReader {
   private eliminations: ReplayElimination[];
   private matchStats?: ReplayMatchStats;
   private teamMatchStats?: ReplayTeamMatchStats;
+  private additionGfps: AdditionGfp[];
+  private safeZones: SafeZone[] = [];
+  private playerPositions: PlayerPositions = {};
   private constructor(replay: Buffer) {
     this.replay = replay;
     this.reader = new BinaryReader(this.replay);
@@ -38,6 +46,7 @@ class ReplayReader {
     this.eliminations = [];
     this.matchStats = undefined;
     this.teamMatchStats = undefined;
+    this.additionGfps = [];
   }
 
   private parseMeta() {
@@ -189,6 +198,9 @@ class ReplayReader {
     if (group === 'playerElim') this.parsePlayerElim(eventReader, startTime);
     else if (metadata === 'AthenaMatchStats') this.parseMatchStats(eventReader);
     else if (metadata === 'AthenaMatchTeamStats') this.parseTeamMatchStats(eventReader);
+    else if (group === 'AdditionGFPEventGroup') this.parseAdditionGfp(eventReader);
+    else if (group === 'ZoneUpdate') this.parseZoneUpdate(eventReader);
+    else if (group === 'CharacterSample') this.parseCharacterSampleMeta(eventReader);
   }
 
   private parsePlayerElim(reader: BinaryReader, timestamp: number) {
@@ -313,6 +325,116 @@ class ReplayReader {
     };
   }
 
+  private parseAdditionGfp(reader: BinaryReader) {
+    if (!this.reader || !this.header) throw new Error('This is an internal method which is not supposed to be called manually. Please use <ReplayReader>.parse()');
+
+    const version = reader.readInt32();
+    const count = reader.readUInt32();
+
+    for (let i = 0; i < count; i += 1) {
+      const moduleId = reader.readString();
+
+      if (version < 2) {
+        this.additionGfps.push({
+          moduleId,
+          moduleVersion: reader.readInt32(),
+        });
+      } else {
+        this.additionGfps.push({
+          moduleId,
+          artifactId: reader.readString(),
+        });
+      }
+    }
+  }
+
+  private parseZoneUpdate(reader: BinaryReader) {
+    if (!this.reader || !this.header) throw new Error('This is an internal method which is not supposed to be called manually. Please use <ReplayReader>.parse()');
+
+    reader.skip(4); // version
+
+    this.safeZones.push({
+      ...reader.readVector3d(),
+      radius: reader.readFloat32(),
+    });
+  }
+
+  private parseCharacterSampleMeta(reader: BinaryReader) {
+    if (!this.reader || !this.header) throw new Error('This is an internal method which is not supposed to be called manually. Please use <ReplayReader>.parse()');
+
+    reader.skip(4); // version
+
+    const playerCount = reader.readUInt32();
+
+    for (let i = 0; i < playerCount; i += 1) {
+      const id = reader.readString();
+
+      let player = this.playerPositions[id];
+
+      if (!player) {
+        player = {};
+
+        this.playerPositions[id] = player;
+      }
+
+      const sampleCount = reader.readUInt32();
+
+      for (let j = 0; j < sampleCount; j += 1) {
+        const location = {
+          ...this.readPosition(reader),
+          movementStyle: reader.readByte().toString('hex'),
+        };
+
+        const time = reader.readInt16();
+
+        player[time] = location;
+      }
+    }
+  }
+
+  private readPositionCompat(reader: BinaryReader) {
+    if (!this.reader || !this.header) throw new Error('This is an internal method which is not supposed to be called manually. Please use <ReplayReader>.parse()');
+
+    const size = reader.readInt32();
+    const x = reader.readInt32();
+    const y = reader.readInt32();
+    const z = reader.readInt32();
+
+    return {
+      x: x - (halfMapSize >> (16 - size)),
+      y: y - (halfMapSize >> (16 - size)),
+      z: z - (halfMapSize >> (16 - size)),
+    };
+  }
+
+  private readPosition(reader: BinaryReader) {
+    if (!this.reader || !this.header) throw new Error('This is an internal method which is not supposed to be called manually. Please use <ReplayReader>.parse()');
+
+    if (this.header.version.major < 22) {
+      return this.readPositionCompat(reader);
+    }
+
+    const size = reader.readInt32();
+    const componentBits = size & 63;
+    const byteCount = (componentBits + 7) >> 3;
+
+    const x = reader.readBytesToInt(byteCount);
+    const y = reader.readBytesToInt(byteCount);
+    const z = reader.readBytesToInt(byteCount);
+
+    const signBit = 1 << (byteCount * 8 - 1);
+
+    const xSign = (x ^ signBit) - signBit;
+    const ySign = (y ^ signBit) - signBit;
+    const zSign = (z ^ signBit) - signBit;
+
+    return {
+      x: xSign,
+      y: ySign,
+      z: zSign,
+    };
+  }
+
   private async resolveDisplayNames() {
     const accountIds: string[] = [];
     [...this.eliminations.map((e) => e.eliminated), ...this.eliminations.map((e) => e.eliminator)].forEach((p) => {
@@ -340,6 +462,9 @@ class ReplayReader {
       matchStats: this.matchStats,
       teamMatchStats: this.teamMatchStats,
       eliminations: this.eliminations,
+      additionGfps: this.additionGfps,
+      safeZones: this.safeZones,
+      playerPositions: this.playerPositions,
     };
   }
 

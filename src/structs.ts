@@ -97,3 +97,29 @@ export interface ReplayTeamMatchStats {
   position: number;
   totalPlayers: number;
 }
+
+export interface AdditionGfp {
+  moduleId: string;
+  moduleVersion?: number;
+  artifactId?: string;
+}
+
+export interface SafeZone {
+  x: number;
+  y: number;
+  z: number;
+  radius: number;
+}
+
+export interface PlayerPosition {
+  x: number;
+  y: number;
+  z: number;
+  movementStyle: string;
+}
+
+export interface PlayerPositions {
+  [id: string]: {
+    [time: number]: PlayerPosition;
+  },
+}

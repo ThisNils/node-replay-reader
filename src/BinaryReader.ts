@@ -212,6 +212,15 @@ class BinaryReader {
   }
 
   /**
+   * Read multiple bytes to a number
+   */
+  readBytesToInt(count: number) {
+    const bytes = this.readBytes(count);
+
+    return bytes.reduce((oldByte, byte, i) => oldByte + (byte << (i * 8)), 0);
+  }
+
+  /**
    * Read 16 bytes as a hex string
    */
   readId() {
