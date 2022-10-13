@@ -3,12 +3,10 @@ import crypto from 'crypto';
 class BinaryReader {
   buffer: Buffer;
   offset: number;
-  engineNetworkVersion: number;
 
   constructor(buffer: Buffer) {
     this.buffer = buffer;
     this.offset = 0;
-    this.engineNetworkVersion = 0;
   }
 
   /**
@@ -107,13 +105,9 @@ class BinaryReader {
   }
 
   /**
-   * Read a double64 if the replay supports it. if not read a float32
+   * Read a double64
    */
   readDouble64() {
-    if (this.engineNetworkVersion < 23) {
-      return this.readFloat32();
-    }
-
     const double64 = this.buffer.readDoubleLE(this.offset);
     this.offset += 8;
     return double64;
@@ -163,13 +157,9 @@ class BinaryReader {
   }
 
   /**
-   * Read a 4 dimensional vector consisting of doubles if the replay supports it. if not read a 4 dimensional vector consisting of floats
+   * Read a 4 dimensional vector consisting of doubles
    */
   readVector4d() {
-    if (this.engineNetworkVersion < 23) {
-      return this.readVector4f();
-    }
-
     return {
       x: this.readDouble64(),
       y: this.readDouble64(),
@@ -179,13 +169,9 @@ class BinaryReader {
   }
 
   /**
-   * Read a 3 dimensional vector consisting of doubles if the replay supports it. if not read a 3 dimensional vector consisting of floats
+   * Read a 3 dimensional vector consisting of doubles
    */
   readVector3d() {
-    if (this.engineNetworkVersion < 23) {
-      return this.readVector3f();
-    }
-
     return {
       x: this.readDouble64(),
       y: this.readDouble64(),

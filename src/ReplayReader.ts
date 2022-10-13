@@ -29,6 +29,7 @@ class ReplayReader {
   private eliminations: ReplayElimination[];
   private matchStats?: ReplayMatchStats;
   private teamMatchStats?: ReplayTeamMatchStats;
+  /** contains a list of additional game files that are required to watch the replay */
   private additionGfps: AdditionGfp[];
   private safeZones: SafeZone[] = [];
   private playerPositions: PlayerPositions = {};
@@ -173,8 +174,6 @@ class ReplayReader {
       flags,
       gameSpecificData,
     };
-
-    this.reader.engineNetworkVersion = engineNetworkVersion;
   }
 
   private parseEvent() {
@@ -192,8 +191,6 @@ class ReplayReader {
       ? this.reader.decryptBuffer(size, this.encryption.encryptionKey) : this.reader.readBytes(size);
 
     const eventReader = new BinaryReader(decryptedEventBuffer);
-
-    eventReader.engineNetworkVersion = this.header.engineNetworkVersion;
 
     if (group === 'playerElim') this.parsePlayerElim(eventReader, startTime);
     else if (metadata === 'AthenaMatchStats') this.parseMatchStats(eventReader);
@@ -213,20 +210,37 @@ class ReplayReader {
     if (version >= 3) {
       reader.skip(1);
       let eliminatedPos;
+      let eliminatorPos;
 
       if (version >= 6) {
-        eliminatedPos = <Location>{
+        if (this.header.engineNetworkVersion < 23) {
+          eliminatedPos = <Location>{
+            rotation: reader.readVector4f(),
+            position: reader.readVector3f(),
+            scale: reader.readVector3f(),
+          };
+        } else {
+          eliminatedPos = <Location>{
+            rotation: reader.readVector4d(),
+            position: reader.readVector3d(),
+            scale: reader.readVector3d(),
+          };
+        }
+      }
+
+      if (this.header.engineNetworkVersion < 23) {
+        eliminatorPos = <Location>{
+          rotation: reader.readVector4f(),
+          position: reader.readVector3f(),
+          scale: reader.readVector3f(),
+        };
+      } else {
+        eliminatorPos = <Location>{
           rotation: reader.readVector4d(),
           position: reader.readVector3d(),
           scale: reader.readVector3d(),
         };
       }
-
-      const eliminatorPos: Location = {
-        rotation: reader.readVector4d(),
-        position: reader.readVector3d(),
-        scale: reader.readVector3d(),
-      };
 
       if (this.header.version.major >= 9) {
         eliminated = this.parsePlayer(reader);
@@ -354,7 +368,7 @@ class ReplayReader {
     reader.skip(4); // version
 
     this.safeZones.push({
-      ...reader.readVector3d(),
+      ...(this.header.engineNetworkVersion < 23 ? reader.readVector3f() : reader.readVector3d()),
       radius: reader.readFloat32(),
     });
   }
@@ -462,6 +476,7 @@ class ReplayReader {
       matchStats: this.matchStats,
       teamMatchStats: this.teamMatchStats,
       eliminations: this.eliminations,
+      /** contains a list of additional game files that are required to watch the replay */
       additionGfps: this.additionGfps,
       safeZones: this.safeZones,
       playerPositions: this.playerPositions,
