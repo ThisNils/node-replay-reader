@@ -3,6 +3,7 @@ import crypto from 'crypto';
 class BinaryReader {
   buffer: Buffer;
   offset: number;
+
   constructor(buffer: Buffer) {
     this.buffer = buffer;
     this.offset = 0;
@@ -104,6 +105,15 @@ class BinaryReader {
   }
 
   /**
+   * Read a double64
+   */
+  readDouble64() {
+    const double64 = this.buffer.readDoubleLE(this.offset);
+    this.offset += 8;
+    return double64;
+  }
+
+  /**
    * Read a string
    */
   readString() {
@@ -124,6 +134,52 @@ class BinaryReader {
   }
 
   /**
+   * Read a 4 dimensional vector consisting of floats
+   */
+  readVector4f() {
+    return {
+      x: this.readFloat32(),
+      y: this.readFloat32(),
+      z: this.readFloat32(),
+      w: this.readFloat32(),
+    };
+  }
+
+  /**
+   * Read a 3 dimensional vector consisting of floats
+   */
+  readVector3f() {
+    return {
+      x: this.readFloat32(),
+      y: this.readFloat32(),
+      z: this.readFloat32(),
+    };
+  }
+
+  /**
+   * Read a 4 dimensional vector consisting of doubles
+   */
+  readVector4d() {
+    return {
+      x: this.readDouble64(),
+      y: this.readDouble64(),
+      z: this.readDouble64(),
+      w: this.readDouble64(),
+    };
+  }
+
+  /**
+   * Read a 3 dimensional vector consisting of doubles
+   */
+  readVector3d() {
+    return {
+      x: this.readDouble64(),
+      y: this.readDouble64(),
+      z: this.readDouble64(),
+    };
+  }
+
+  /**
    * Read a byte
    */
   readByte() {
@@ -139,6 +195,15 @@ class BinaryReader {
     const bytes = Buffer.from(this.buffer.toString('binary', this.offset, this.offset + count), 'binary');
     this.offset += count;
     return bytes;
+  }
+
+  /**
+   * Read multiple bytes to a number
+   */
+  readBytesToInt(count: number) {
+    const bytes = this.readBytes(count);
+
+    return bytes.reduce((oldByte, byte, i) => oldByte + (byte << (i * 8)), 0);
   }
 
   /**

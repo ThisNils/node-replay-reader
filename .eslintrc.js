@@ -23,6 +23,7 @@ module.exports = {
     ],
     'default-case': 'off',
     'max-len': 'off',
+    'no-bitwise': 'off',
   },
   settings: {
     'import/resolver': {
