@@ -1,7 +1,22 @@
+import BinaryReader from './BinaryReader';
+
+export interface ParserParseFunction<T> {
+  // eslint-disable-next-line no-unused-vars
+  (reader: BinaryReader): T,
+}
+
+export interface ReadObjectResult<U> {
+  [key: string]: U,
+}
+
+export interface HasToString {
+  toString(): string,
+}
+
 export interface ReaderConfig {
   // eslint-disable-next-line no-unused-vars
-  debug: undefined | ((msg: string) => void);
-  resolveAccountNames: boolean;
+  debug?: ((msg: string) => void);
+  resolveAccountNames?: boolean;
 }
 
 export type Parseable = Buffer | string;
@@ -53,7 +68,7 @@ export interface ReplayHeader {
   fileVersionUE4?: number;
   fileVersionUE5?: number;
   packageVersionLicenseeUe?: number;
-  levelNamesAndTimes: any[];
+  levelNamesAndTimes: ReadObjectResult<number>;
   flags: number;
   gameSpecificData: any[];
 }
