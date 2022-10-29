@@ -17,7 +17,7 @@ describe('Parsing a replay', () => {
     });
 
     it(`should resolve account names from ${replay} correctly`, async () => {
-      const actualResult = JSON.parse(JSON.stringify(await ReplayReader.parse(`./replays/${replay}.replay`, { resolveAccountNames: true })));
+      const actualResult = await ReplayReader.parse(`./replays/${replay}.replay`, { resolveAccountNames: true });
 
       assert.equal(actualResult.eliminations.some((elimination) => elimination.eliminator.name || elimination.eliminated.name), true, 'Some eliminations have resolved names');
     });
