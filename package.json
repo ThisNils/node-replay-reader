@@ -11,7 +11,7 @@
   ],
   "scripts": {
     "build": "tsc",
-    "test": "mocha mocha.test.js"
+    "test": "cd test && mocha index"
   },
   "files": [
     "dist",

@@ -1,0 +1,3438 @@
+{
+  "meta": {
+    "magic": 480436863,
+    "fileVersion": 5,
+    "lengthInMs": 292697,
+    "networkVersion": 2,
+    "changelist": 9603417,
+    "name": "Ungespeicherte Wiederholung",
+    "isLive": false,
+    "timestamp": "2019-10-21T21:39:51.727Z",
+    "isCompressed": true
+  },
+  "header": {
+    "magic": 754295101,
+    "networkVersion": 14,
+    "networkChecksum": 1348245422,
+    "engineNetworkVersion": 13,
+    "gameNetworkProtocol": 0,
+    "id": "9e6c450d47dfc747a38509ee6ca7c778",
+    "version": {
+      "branch": "++Fortnite+Release-11.00",
+      "major": 11,
+      "minor": 0,
+      "changelist": 9603448,
+      "patch": 0
+    },
+    "levelNamesAndTimes": {
+      "/Game/Athena/Apollo/Maps/Apollo_Terrain": 0
+    },
+    "flags": 3,
+    "gameSpecificData": [
+      "SubGame=Athena"
+    ]
+  },
+  "matchStats": {
+    "accuracy": 0.5323740839958191,
+    "assists": 0,
+    "eliminations": 6,
+    "weaponDamage": 963,
+    "otherDamage": 113,
+    "revives": 0,
+    "damageTaken": 162,
+    "damageToStructures": 1271,
+    "materialsGathered": 360,
+    "materialsUsed": 240,
+    "totalTraveled": 0
+  },
+  "teamMatchStats": {
+    "position": 36,
+    "totalPlayers": 99
+  },
+  "eliminations": [
+    {
+      "eliminated": {
+        "id": "c17de387a3cb4ac3876c5ae374679c83",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": -0.9238795638084412,
+            "w": 0.38268327713012695
+          },
+          "position": {
+            "x": -67067.1953125,
+            "y": -39750.34765625,
+            "z": 70220.796875
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "id": "60f4a65831e3486db33feda0d0c758ab",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0.06132078915834427,
+            "w": 0.9981181025505066
+          },
+          "position": {
+            "x": -111831.9140625,
+            "y": -56906.44921875,
+            "z": 66957.375
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "03",
+      "knocked": true,
+      "timestamp": 98147
+    },
+    {
+      "eliminated": {
+        "name": "Bot",
+        "isBot": true,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "id": "54921192bba341baa95369580ed17069",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "04",
+      "knocked": true,
+      "timestamp": 113611
+    },
+    {
+      "eliminated": {
+        "name": "Bot",
+        "isBot": true,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "id": "0eddf3a0f1634cbda775d968b4911efd",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "08",
+      "knocked": true,
+      "timestamp": 115555
+    },
+    {
+      "eliminated": {
+        "id": "60f4a65831e3486db33feda0d0c758ab",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "id": "8ea40f328fd443cba7b3b1eb679d3e28",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "03",
+      "knocked": true,
+      "timestamp": 117534
+    },
+    {
+      "eliminated": {
+        "id": "c17de387a3cb4ac3876c5ae374679c83",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "id": "60f4a65831e3486db33feda0d0c758ab",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "03",
+      "knocked": false,
+      "timestamp": 118235
+    },
+    {
+      "eliminated": {
+        "id": "8ea40f328fd443cba7b3b1eb679d3e28",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "id": "27d0d3c702104806b126be901d668c20",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "30",
+      "knocked": false,
+      "timestamp": 118367
+    },
+    {
+      "eliminated": {
+        "name": "Bot",
+        "isBot": true,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "id": "54921192bba341baa95369580ed17069",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "04",
+      "knocked": true,
+      "timestamp": 119068
+    },
+    {
+      "eliminated": {
+        "id": "6774a4d75ff144529f0a9350d99ec7d3",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "id": "9d361cb8602c4671912c4c1c8ba47595",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "04",
+      "knocked": true,
+      "timestamp": 119371
+    },
+    {
+      "eliminated": {
+        "name": "Bot",
+        "isBot": true,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0.8986771106719971,
+            "w": 0.4386107921600342
+          },
+          "position": {
+            "x": 33195.66796875,
+            "y": -82541.828125,
+            "z": -3395.849853515625
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "id": "b6a0405fd6ba4aaba1d1bd001095a772",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0.5811576843261719,
+            "w": 0.8137909770011902
+          },
+          "position": {
+            "x": 33613.0703125,
+            "y": -82234.8515625,
+            "z": -2665.95947265625
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "04",
+      "knocked": true,
+      "timestamp": 120537
+    },
+    {
+      "eliminated": {
+        "id": "356d6cefaa2f440aa39e0c2e9bc17725",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "id": "9d361cb8602c4671912c4c1c8ba47595",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "04",
+      "knocked": true,
+      "timestamp": 124732
+    },
+    {
+      "eliminated": {
+        "id": "356d6cefaa2f440aa39e0c2e9bc17725",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "id": "9d361cb8602c4671912c4c1c8ba47595",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "03",
+      "knocked": false,
+      "timestamp": 126398
+    },
+    {
+      "eliminated": {
+        "name": "Bot",
+        "isBot": true,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "name": "Bot",
+        "isBot": true,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "04",
+      "knocked": true,
+      "timestamp": 126803
+    },
+    {
+      "eliminated": {
+        "name": "Bot",
+        "isBot": true,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": -0.9783168435096741,
+            "w": 0.20711374282836914
+          },
+          "position": {
+            "x": 32642.158203125,
+            "y": -82708.3046875,
+            "z": -3395.849853515625
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "id": "b6a0405fd6ba4aaba1d1bd001095a772",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0.6037673950195312,
+            "w": 0.7971605062484741
+          },
+          "position": {
+            "x": 33649.1875,
+            "y": -82202.4765625,
+            "z": -2987.89453125
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "04",
+      "knocked": false,
+      "timestamp": 127240
+    },
+    {
+      "eliminated": {
+        "name": "Bot",
+        "isBot": true,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "id": "0eddf3a0f1634cbda775d968b4911efd",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "08",
+      "knocked": false,
+      "timestamp": 127316
+    },
+    {
+      "eliminated": {
+        "id": "6774a4d75ff144529f0a9350d99ec7d3",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "id": "9d361cb8602c4671912c4c1c8ba47595",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "03",
+      "knocked": false,
+      "timestamp": 127754
+    },
+    {
+      "eliminated": {
+        "name": "Bot",
+        "isBot": true,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "id": "54921192bba341baa95369580ed17069",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "02",
+      "knocked": false,
+      "timestamp": 130435
+    },
+    {
+      "eliminated": {
+        "name": "Bot",
+        "isBot": true,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "id": "54921192bba341baa95369580ed17069",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "04",
+      "knocked": false,
+      "timestamp": 132070
+    },
+    {
+      "eliminated": {
+        "name": "Bot",
+        "isBot": true,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "name": "Bot",
+        "isBot": true,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "03",
+      "knocked": true,
+      "timestamp": 132611
+    },
+    {
+      "eliminated": {
+        "id": "60f4a65831e3486db33feda0d0c758ab",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "id": "27d0d3c702104806b126be901d668c20",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "03",
+      "knocked": false,
+      "timestamp": 137619
+    },
+    {
+      "eliminated": {
+        "name": "Bot",
+        "isBot": true,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "id": "09751afc65214881a20aa0c25060cdce",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "04",
+      "knocked": true,
+      "timestamp": 138752
+    },
+    {
+      "eliminated": {
+        "name": "Bot",
+        "isBot": true,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "id": "54921192bba341baa95369580ed17069",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "02",
+      "knocked": false,
+      "timestamp": 139121
+    },
+    {
+      "eliminated": {
+        "name": "Bot",
+        "isBot": true,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "id": "09751afc65214881a20aa0c25060cdce",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "04",
+      "knocked": false,
+      "timestamp": 143669
+    },
+    {
+      "eliminated": {
+        "name": "Bot",
+        "isBot": true,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "id": "ed6d424c9efe444f9e45c814b0d5013e",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "03",
+      "knocked": true,
+      "timestamp": 143732
+    },
+    {
+      "eliminated": {
+        "name": "Bot",
+        "isBot": true,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "id": "0eddf3a0f1634cbda775d968b4911efd",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "08",
+      "knocked": false,
+      "timestamp": 147134
+    },
+    {
+      "eliminated": {
+        "name": "Bot",
+        "isBot": true,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "id": "5c684e594c6740ea9d180403e34e7fd1",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "04",
+      "knocked": true,
+      "timestamp": 147384
+    },
+    {
+      "eliminated": {
+        "name": "Bot",
+        "isBot": true,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "id": "ed6d424c9efe444f9e45c814b0d5013e",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "03",
+      "knocked": false,
+      "timestamp": 150269
+    },
+    {
+      "eliminated": {
+        "name": "Bot",
+        "isBot": true,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "name": "Bot",
+        "isBot": true,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "03",
+      "knocked": false,
+      "timestamp": 150713
+    },
+    {
+      "eliminated": {
+        "name": "Bot",
+        "isBot": true,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "id": "5c684e594c6740ea9d180403e34e7fd1",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "04",
+      "knocked": false,
+      "timestamp": 155420
+    },
+    {
+      "eliminated": {
+        "name": "Bot",
+        "isBot": true,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "id": "5c684e594c6740ea9d180403e34e7fd1",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "04",
+      "knocked": false,
+      "timestamp": 155455
+    },
+    {
+      "eliminated": {
+        "name": "Bot",
+        "isBot": true,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0.6276298761367798,
+            "w": 0.7785118818283081
+          },
+          "position": {
+            "x": 33712.5390625,
+            "y": -82601.2578125,
+            "z": -3370.929931640625
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "id": "b6a0405fd6ba4aaba1d1bd001095a772",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": -0.9910499453544617,
+            "w": 0.13349127769470215
+          },
+          "position": {
+            "x": 33955.80078125,
+            "y": -82669.6328125,
+            "z": -3370.85009765625
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "04",
+      "knocked": false,
+      "timestamp": 160008
+    },
+    {
+      "eliminated": {
+        "name": "Bot",
+        "isBot": true,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "id": "09751afc65214881a20aa0c25060cdce",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "03",
+      "knocked": false,
+      "timestamp": 162984
+    },
+    {
+      "eliminated": {
+        "id": "ed6d424c9efe444f9e45c814b0d5013e",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "id": "38feea485c314202b77d9ae7a6640d55",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "03",
+      "knocked": true,
+      "timestamp": 163956
+    },
+    {
+      "eliminated": {
+        "id": "8eac1af98f5f4cacae7717b096a6577e",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "id": "38feea485c314202b77d9ae7a6640d55",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "03",
+      "knocked": false,
+      "timestamp": 166852
+    },
+    {
+      "eliminated": {
+        "id": "ed6d424c9efe444f9e45c814b0d5013e",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "id": "38feea485c314202b77d9ae7a6640d55",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "03",
+      "knocked": false,
+      "timestamp": 167014
+    },
+    {
+      "eliminated": {
+        "name": "Bot",
+        "isBot": true,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": -0.7111824750900269,
+            "w": 0.7030074596405029
+          },
+          "position": {
+            "x": 32794.34765625,
+            "y": -82859.28125,
+            "z": -3395.849853515625
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "id": "b6a0405fd6ba4aaba1d1bd001095a772",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": -0.8527045249938965,
+            "w": 0.5223935842514038
+          },
+          "position": {
+            "x": 32737.744140625,
+            "y": -82786.3671875,
+            "z": -3270.249267578125
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "04",
+      "knocked": true,
+      "timestamp": 170785
+    },
+    {
+      "eliminated": {
+        "name": "Bot",
+        "isBot": true,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0.6717500686645508,
+            "w": 0.740777850151062
+          },
+          "position": {
+            "x": 32800.41015625,
+            "y": -82804.09375,
+            "z": -3395.849853515625
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "id": "b6a0405fd6ba4aaba1d1bd001095a772",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": -0.9730023741722107,
+            "w": 0.2307947278022766
+          },
+          "position": {
+            "x": 32707.587890625,
+            "y": -82537.3203125,
+            "z": -3370.85009765625
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "04",
+      "knocked": false,
+      "timestamp": 175297
+    },
+    {
+      "eliminated": {
+        "id": "0eddf3a0f1634cbda775d968b4911efd",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "id": "27d0d3c702104806b126be901d668c20",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "04",
+      "knocked": false,
+      "timestamp": 179070
+    },
+    {
+      "eliminated": {
+        "name": "Bot",
+        "isBot": true,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "name": "Bot",
+        "isBot": true,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "03",
+      "knocked": true,
+      "timestamp": 182713
+    },
+    {
+      "eliminated": {
+        "id": "1c156b9a59d34ff2ac82907e06718c4b",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": -0.3940701186656952,
+            "w": 0.919080376625061
+          },
+          "position": {
+            "x": 34878.70703125,
+            "y": -75236.7578125,
+            "z": -3011.849853515625
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "id": "e198cb46ed9a400a85375c4ceef0089d",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0.9550434350967407,
+            "w": 0.2964658737182617
+          },
+          "position": {
+            "x": 35039.13671875,
+            "y": -75163.578125,
+            "z": -2986.849853515625
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "03",
+      "knocked": true,
+      "timestamp": 186556
+    },
+    {
+      "eliminated": {
+        "name": "Bot",
+        "isBot": true,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "name": "Bot",
+        "isBot": true,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "04",
+      "knocked": false,
+      "timestamp": 188390
+    },
+    {
+      "eliminated": {
+        "id": "1c156b9a59d34ff2ac82907e06718c4b",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0.11409297585487366,
+            "w": 0.9934700727462769
+          },
+          "position": {
+            "x": 34844.65234375,
+            "y": -75397.8984375,
+            "z": -3011.849853515625
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "id": "e198cb46ed9a400a85375c4ceef0089d",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": -0.9807852506637573,
+            "w": 0.1950901746749878
+          },
+          "position": {
+            "x": 34908.0703125,
+            "y": -75404.515625,
+            "z": -2986.849853515625
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "03",
+      "knocked": false,
+      "timestamp": 189573
+    },
+    {
+      "eliminated": {
+        "id": "43d3dffede734f0eb6094e8f1b510f74",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": -0.6370306015014648,
+            "w": 0.7708384990692139
+          },
+          "position": {
+            "x": 34447.16796875,
+            "y": -71344.6640625,
+            "z": -1877.87939453125
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "id": "b6a0405fd6ba4aaba1d1bd001095a772",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0.6375804543495178,
+            "w": 0.7703837156295776
+          },
+          "position": {
+            "x": 33720.1875,
+            "y": -80222.765625,
+            "z": -2468.554443359375
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "06",
+      "knocked": false,
+      "timestamp": 192340
+    },
+    {
+      "eliminated": {
+        "name": "Bot",
+        "isBot": true,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "id": "70900139b7814cfb91d00a398b8eab78",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "04",
+      "knocked": true,
+      "timestamp": 193149
+    },
+    {
+      "eliminated": {
+        "id": "9d361cb8602c4671912c4c1c8ba47595",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "id": "27d0d3c702104806b126be901d668c20",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "03",
+      "knocked": true,
+      "timestamp": 195580
+    },
+    {
+      "eliminated": {
+        "name": "Bot",
+        "isBot": true,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "id": "70900139b7814cfb91d00a398b8eab78",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "04",
+      "knocked": false,
+      "timestamp": 197651
+    },
+    {
+      "eliminated": {
+        "id": "9d361cb8602c4671912c4c1c8ba47595",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "id": "27d0d3c702104806b126be901d668c20",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "03",
+      "knocked": false,
+      "timestamp": 200099
+    },
+    {
+      "eliminated": {
+        "name": "Bot",
+        "isBot": true,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "name": "Bot",
+        "isBot": true,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "03",
+      "knocked": false,
+      "timestamp": 200765
+    },
+    {
+      "eliminated": {
+        "name": "Bot",
+        "isBot": true,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 1,
+            "w": 8.940696716308594e-7
+          },
+          "position": {
+            "x": 23637.896484375,
+            "y": -86454.375,
+            "z": -3373.3193359375
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "id": "b6a0405fd6ba4aaba1d1bd001095a772",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": -0.9828665852546692,
+            "w": 0.184317946434021
+          },
+          "position": {
+            "x": 33672.609375,
+            "y": -80593.0546875,
+            "z": -2582.419189453125
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "06",
+      "knocked": false,
+      "timestamp": 203928
+    },
+    {
+      "eliminated": {
+        "id": "af0a84b2c78c49a68f621d89ec4eb7d4",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "id": "1ac76fadb11040968c58c13bf787de12",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "03",
+      "knocked": true,
+      "timestamp": 204464
+    },
+    {
+      "eliminated": {
+        "id": "af0a84b2c78c49a68f621d89ec4eb7d4",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "id": "1ac76fadb11040968c58c13bf787de12",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "03",
+      "knocked": false,
+      "timestamp": 205989
+    },
+    {
+      "eliminated": {
+        "id": "09751afc65214881a20aa0c25060cdce",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "id": "1ac76fadb11040968c58c13bf787de12",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "03",
+      "knocked": false,
+      "timestamp": 207817
+    },
+    {
+      "eliminated": {
+        "name": "Bot",
+        "isBot": true,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "id": "b51a955f27e44ce6bd2e43a430305a4f",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "04",
+      "knocked": true,
+      "timestamp": 214062
+    },
+    {
+      "eliminated": {
+        "name": "Bot",
+        "isBot": true,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "id": "7e179041c0aa49219a93a9cf25c01e2f",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "04",
+      "knocked": false,
+      "timestamp": 218464
+    },
+    {
+      "eliminated": {
+        "id": "27d0d3c702104806b126be901d668c20",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "id": "623fc78dd67d4c0ca0fcae6a7723c130",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "04",
+      "knocked": true,
+      "timestamp": 222006
+    },
+    {
+      "eliminated": {
+        "id": "e198cb46ed9a400a85375c4ceef0089d",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": -0.32456979155540466,
+            "w": 0.9458617568016052
+          },
+          "position": {
+            "x": 35063.04296875,
+            "y": -76299.03125,
+            "z": -3395.849853515625
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "id": "b6a0405fd6ba4aaba1d1bd001095a772",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": -0.9974698424339294,
+            "w": 0.0710906982421875
+          },
+          "position": {
+            "x": 35269.9765625,
+            "y": -76323.6484375,
+            "z": -3348.980224609375
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "03",
+      "knocked": true,
+      "timestamp": 223316
+    },
+    {
+      "eliminated": {
+        "id": "e198cb46ed9a400a85375c4ceef0089d",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0.4765661358833313,
+            "w": 0.8791385889053345
+          },
+          "position": {
+            "x": 35200.0859375,
+            "y": -76208.203125,
+            "z": -3395.849853515625
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "id": "b6a0405fd6ba4aaba1d1bd001095a772",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0.9818968176841736,
+            "w": 0.18941646814346313
+          },
+          "position": {
+            "x": 35274.93359375,
+            "y": -76290.25,
+            "z": -3300.86669921875
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "03",
+      "knocked": false,
+      "timestamp": 226264
+    },
+    {
+      "eliminated": {
+        "id": "6774a4d75ff144529f0a9350d99ec7d3",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "id": "623fc78dd67d4c0ca0fcae6a7723c130",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "04",
+      "knocked": false,
+      "timestamp": 226327
+    },
+    {
+      "eliminated": {
+        "id": "27d0d3c702104806b126be901d668c20",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "id": "623fc78dd67d4c0ca0fcae6a7723c130",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "04",
+      "knocked": false,
+      "timestamp": 226431
+    },
+    {
+      "eliminated": {
+        "id": "5c684e594c6740ea9d180403e34e7fd1",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "id": "083acef5dc5143089768392fb09cb158",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "05",
+      "knocked": true,
+      "timestamp": 231271
+    },
+    {
+      "eliminated": {
+        "id": "40bca9d831ef41bf989196ec0ed00db6",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0.32436442375183105,
+            "w": 0.9459322094917297
+          },
+          "position": {
+            "x": 36900.62109375,
+            "y": -77401.390625,
+            "z": -3395.849853515625
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "id": "caeea208d28845b2a73dba61802caf2a",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": -0.9729399681091309,
+            "w": 0.23105788230895996
+          },
+          "position": {
+            "x": 42476.078125,
+            "y": -72924.4453125,
+            "z": -3371.889892578125
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "06",
+      "knocked": true,
+      "timestamp": 235638
+    },
+    {
+      "eliminated": {
+        "name": "Bot",
+        "isBot": true,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "id": "c5eb856307784d5693b1803917db9499",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "03",
+      "knocked": false,
+      "timestamp": 237860
+    },
+    {
+      "eliminated": {
+        "id": "ae68e45d82504c638bca89a31b2a07f3",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "id": "70900139b7814cfb91d00a398b8eab78",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "04",
+      "knocked": true,
+      "timestamp": 242754
+    },
+    {
+      "eliminated": {
+        "id": "b51a955f27e44ce6bd2e43a430305a4f",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "id": "083acef5dc5143089768392fb09cb158",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "03",
+      "knocked": true,
+      "timestamp": 244254
+    },
+    {
+      "eliminated": {
+        "id": "b51a955f27e44ce6bd2e43a430305a4f",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "id": "083acef5dc5143089768392fb09cb158",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "03",
+      "knocked": false,
+      "timestamp": 247125
+    },
+    {
+      "eliminated": {
+        "id": "40bca9d831ef41bf989196ec0ed00db6",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0.9285058379173279,
+            "w": 0.37131792306900024
+          },
+          "position": {
+            "x": 37464.51953125,
+            "y": -77813.6796875,
+            "z": -3396.889892578125
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "id": "caeea208d28845b2a73dba61802caf2a",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": -0.5341063737869263,
+            "w": 0.845417320728302
+          },
+          "position": {
+            "x": 35067.828125,
+            "y": -74736.46875,
+            "z": -2559.31982421875
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "06",
+      "knocked": false,
+      "timestamp": 258766
+    },
+    {
+      "eliminated": {
+        "id": "b6a0405fd6ba4aaba1d1bd001095a772",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 35406.5,
+            "y": -75497.03125,
+            "z": -2420.654541015625
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "id": "caeea208d28845b2a73dba61802caf2a",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": -0.5341063737869263,
+            "w": 0.845417320728302
+          },
+          "position": {
+            "x": 35067.828125,
+            "y": -74736.46875,
+            "z": -2559.31982421875
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "03",
+      "knocked": false,
+      "timestamp": 258766
+    },
+    {
+      "eliminated": {
+        "id": "7e179041c0aa49219a93a9cf25c01e2f",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "id": "4c5eebe9d58544fb9190f9dcbdf24ce9",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "03",
+      "knocked": false,
+      "timestamp": 288971
+    },
+    {
+      "eliminated": {
+        "name": "Bot",
+        "isBot": true,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "name": "Bot",
+        "isBot": true,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "06",
+      "knocked": true,
+      "timestamp": 289677
+    },
+    {
+      "eliminated": {
+        "name": "Bot",
+        "isBot": true,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "eliminator": {
+        "id": "5a1355a767194b88a801439bc1e13c21",
+        "isBot": false,
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "gunType": "05",
+      "knocked": true,
+      "timestamp": 291083
+    }
+  ],
+  "additionGfps": [],
+  "safeZones": [],
+  "playerPositions": {}
+}

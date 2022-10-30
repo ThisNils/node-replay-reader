@@ -1,4 +1,5 @@
 import crypto from 'crypto';
+import type { HasToString, ParserParseFunction, ReadObjectResult } from './structs';
 
 class BinaryReader {
   buffer: Buffer;
@@ -230,12 +231,14 @@ class BinaryReader {
    * Read an array that consists of objects
    */
   // eslint-disable-next-line no-unused-vars
-  readObjectArray(keyFn: (reader: BinaryReader) => any, valueFn: (reader: BinaryReader) => any) {
+  readObjectArray<KeyType extends HasToString, ValueType>(keyFn: ParserParseFunction<KeyType>, valueFn: ParserParseFunction<ValueType>) {
     const arrayLength = this.readUInt32();
-    const array = [];
+    const array: ReadObjectResult<ValueType> = {};
+
     for (let i = 0; i < arrayLength; i += 1) {
-      array.push(Object.defineProperty({}, keyFn(this), { value: valueFn(this) }));
+      array[keyFn(this).toString()] = valueFn(this);
     }
+
     return array;
   }
 

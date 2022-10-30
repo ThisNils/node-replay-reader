@@ -1,0 +1,770 @@
+{
+  "meta": {
+    "magic": 480436863,
+    "fileVersion": 5,
+    "lengthInMs": 144574,
+    "networkVersion": 2,
+    "changelist": 5484841,
+    "name": "Ungespeicherte Wiederholung",
+    "isLive": false,
+    "timestamp": "2019-03-23T03:26:30.103Z",
+    "isCompressed": true
+  },
+  "header": {
+    "magic": 754295101,
+    "networkVersion": 14,
+    "networkChecksum": 2625471030,
+    "engineNetworkVersion": 11,
+    "gameNetworkProtocol": 0,
+    "id": "9c986e6290b24441963808b44bfe29a1",
+    "version": {
+      "branch": "++Fortnite+Release-8.11",
+      "major": 8,
+      "minor": 11,
+      "changelist": 5484841,
+      "patch": 0
+    },
+    "levelNamesAndTimes": {
+      "/Game/Athena/Maps/Athena_Terrain": 0
+    },
+    "flags": 3,
+    "gameSpecificData": [
+      "SubGame=Athena"
+    ]
+  },
+  "matchStats": {
+    "accuracy": 0,
+    "assists": 0,
+    "eliminations": 0,
+    "weaponDamage": 0,
+    "otherDamage": 0,
+    "revives": 0,
+    "damageTaken": 172,
+    "damageToStructures": 150,
+    "materialsGathered": 41,
+    "materialsUsed": 10,
+    "totalTraveled": 0
+  },
+  "teamMatchStats": {
+    "position": 80,
+    "totalPlayers": 97
+  },
+  "eliminations": [
+    {
+      "eliminated": {
+        "name": "Plex YT GAMER",
+        "isBot": false
+      },
+      "eliminator": {
+        "name": "Plex YT GAMER",
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        },
+        "isBot": false
+      },
+      "gunType": "2e",
+      "knocked": false,
+      "timestamp": 8559
+    },
+    {
+      "eliminated": {
+        "name": "adamsRS3",
+        "isBot": false
+      },
+      "eliminator": {
+        "name": "adamsRS3",
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        },
+        "isBot": false
+      },
+      "gunType": "2e",
+      "knocked": false,
+      "timestamp": 36456
+    },
+    {
+      "eliminated": {
+        "name": "NaVi_MakSutI",
+        "isBot": false
+      },
+      "eliminator": {
+        "name": "siNa_MPG",
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        },
+        "isBot": false
+      },
+      "gunType": "10",
+      "knocked": false,
+      "timestamp": 88505
+    },
+    {
+      "eliminated": {
+        "name": "ϹΗΕZ",
+        "isBot": false
+      },
+      "eliminator": {
+        "name": "Kzander TV",
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        },
+        "isBot": false
+      },
+      "gunType": "03",
+      "knocked": false,
+      "timestamp": 89684
+    },
+    {
+      "eliminated": {
+        "name": "TTv_Pm_Sc0rPi0N",
+        "isBot": false
+      },
+      "eliminator": {
+        "name": "carlos-carlos230",
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        },
+        "isBot": false
+      },
+      "gunType": "04",
+      "knocked": false,
+      "timestamp": 98550
+    },
+    {
+      "eliminated": {
+        "name": "OKuxwaDiaBeł",
+        "isBot": false
+      },
+      "eliminator": {
+        "name": "JulianWarocquier",
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        },
+        "isBot": false
+      },
+      "gunType": "01",
+      "knocked": false,
+      "timestamp": 99355
+    },
+    {
+      "eliminated": {
+        "name": "Willokhlass",
+        "isBot": false
+      },
+      "eliminator": {
+        "name": "Leg4cyOf Netero",
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        },
+        "isBot": false
+      },
+      "gunType": "03",
+      "knocked": false,
+      "timestamp": 99606
+    },
+    {
+      "eliminated": {
+        "name": "Ekamrr-yt",
+        "isBot": false
+      },
+      "eliminator": {
+        "name": "AlkoKalle",
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        },
+        "isBot": false
+      },
+      "gunType": "02",
+      "knocked": false,
+      "timestamp": 99843
+    },
+    {
+      "eliminated": {
+        "name": "0vuk0",
+        "isBot": false
+      },
+      "eliminator": {
+        "name": "0vuk0",
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        },
+        "isBot": false
+      },
+      "gunType": "2e",
+      "knocked": false,
+      "timestamp": 100445
+    },
+    {
+      "eliminated": {
+        "name": "vao.exe",
+        "isBot": false
+      },
+      "eliminator": {
+        "name": "PeluoTOP",
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        },
+        "isBot": false
+      },
+      "gunType": "03",
+      "knocked": false,
+      "timestamp": 102204
+    },
+    {
+      "eliminated": {
+        "name": "MRO v1.1",
+        "isBot": false
+      },
+      "eliminator": {
+        "name": "UtileForm72",
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        },
+        "isBot": false
+      },
+      "gunType": "04",
+      "knocked": false,
+      "timestamp": 103323
+    },
+    {
+      "eliminated": {
+        "name": "SoraΗD",
+        "isBot": false
+      },
+      "eliminator": {
+        "name": "RagnarITB",
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        },
+        "isBot": false
+      },
+      "gunType": "03",
+      "knocked": false,
+      "timestamp": 103957
+    },
+    {
+      "eliminated": {
+        "name": "blithzz49",
+        "isBot": false
+      },
+      "eliminator": {
+        "name": "DønaldDuck",
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        },
+        "isBot": false
+      },
+      "gunType": "03",
+      "knocked": false,
+      "timestamp": 105090
+    },
+    {
+      "eliminated": {
+        "name": "DekroHD",
+        "isBot": false
+      },
+      "eliminator": {
+        "name": "Cook31100",
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        },
+        "isBot": false
+      },
+      "gunType": "03",
+      "knocked": false,
+      "timestamp": 105650
+    },
+    {
+      "eliminated": {
+        "name": "05lol26",
+        "isBot": false
+      },
+      "eliminator": {
+        "name": "uryyy15",
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        },
+        "isBot": false
+      },
+      "gunType": "05",
+      "knocked": false,
+      "timestamp": 107502
+    },
+    {
+      "eliminated": {
+        "name": "killerix88",
+        "isBot": false
+      },
+      "eliminator": {
+        "name": "SoLiD_Vaskebjørn",
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        },
+        "isBot": false
+      },
+      "gunType": "03",
+      "knocked": false,
+      "timestamp": 111518
+    },
+    {
+      "eliminated": {
+        "name": "carlos-carlos230",
+        "isBot": false
+      },
+      "eliminator": {
+        "name": "DønaldDuck",
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        },
+        "isBot": false
+      },
+      "gunType": "03",
+      "knocked": false,
+      "timestamp": 112352
+    },
+    {
+      "eliminated": {
+        "name": "12william12",
+        "isBot": false
+      },
+      "eliminator": {
+        "name": "NeMo Nircial",
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        },
+        "isBot": false
+      },
+      "gunType": "05",
+      "knocked": false,
+      "timestamp": 121281
+    },
+    {
+      "eliminated": {
+        "name": "juan1609",
+        "isBot": false
+      },
+      "eliminator": {
+        "name": "Leg4cyOf Netero",
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        },
+        "isBot": false
+      },
+      "gunType": "03",
+      "knocked": false,
+      "timestamp": 125843
+    },
+    {
+      "eliminated": {
+        "name": "xNocken",
+        "isBot": false
+      },
+      "eliminator": {
+        "name": "N2K_Patchi",
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        },
+        "isBot": false
+      },
+      "gunType": "02",
+      "knocked": false,
+      "timestamp": 126946
+    },
+    {
+      "eliminated": {
+        "name": "ttvDarioesFresco",
+        "isBot": false
+      },
+      "eliminator": {
+        "name": "PeluoTOP",
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        },
+        "isBot": false
+      },
+      "gunType": "03",
+      "knocked": false,
+      "timestamp": 140382
+    },
+    {
+      "eliminated": {
+        "name": "UtileForm72",
+        "isBot": false
+      },
+      "eliminator": {
+        "name": "AlkoKalle",
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        },
+        "isBot": false
+      },
+      "gunType": "02",
+      "knocked": false,
+      "timestamp": 140483
+    },
+    {
+      "eliminated": {
+        "name": "Thicc Depyツ",
+        "isBot": false
+      },
+      "eliminator": {
+        "name": "ventus314",
+        "location": {
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        },
+        "isBot": false
+      },
+      "gunType": "05",
+      "knocked": false,
+      "timestamp": 140617
+    }
+  ],
+  "additionGfps": [],
+  "safeZones": [],
+  "playerPositions": {}
+}
