@@ -138,3 +138,18 @@ export interface PlayerPositions {
     [time: number]: PlayerPosition;
   },
 }
+
+export enum FLocalFileReplayCustomVersion {
+  BeforeCustomVersionWasAdded = 0,
+
+  FixedSizeFriendlyName,
+  CompressionSupport,
+  RecordingTimestamp,
+  StreamChunkTimes,
+  FriendlyNameCharEncoding,
+  EncryptionSupport,
+  CustomVersions,
+
+  VersionPlusOne,
+  LatestVersion = VersionPlusOne - 1,
+}
